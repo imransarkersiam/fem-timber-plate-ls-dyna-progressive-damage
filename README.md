@@ -1,92 +1,156 @@
-# fem-timber-plate-ls-dyna-progressive-damage
-Finite element modelling of a timber plate using LS-DYNA for progressive damage and post-peak softening analysis.
-# Finite Element Modelling of a Timber Plate Using LS-DYNA: A Technical Project on Progressive Damage Analysis
+# Finite Element Modelling of a Timber Plate Using LS-DYNA  
+### Progressive Damage Analysis using MAT_054
 
-## Project Overview
-This project presents the finite element modelling (FEM) of a timber plate subjected to uniaxial tensile loading using LS-DYNA. The main objective is to evaluate the structural response and progressive damage behaviour of timber through the application of the damage-based material model MAT_054.
+> 🔬 A finite element analysis project focused on simulating progressive damage, stiffness degradation, and post-peak softening behaviour of timber using LS-DYNA.
 
-The study was developed as a technical engineering project to demonstrate practical competency in numerical modelling, mesh discretisation, boundary condition implementation, and simulation result interpretation. Particular emphasis was given to progressive damage evolution, stiffness degradation, and post-peak softening behaviour.
+---
 
-## Problem Statement
-The accurate prediction of damage and failure behaviour in timber structures remains a significant challenge due to their anisotropic nature and progressive failure characteristics. Unlike conventional isotropic materials, timber exhibits gradual stiffness degradation and post-peak softening, which cannot be effectively captured using simplified elastic or linear models.
+## 📖 Overview
+This project presents a detailed **Finite Element Modelling (FEM)** study of a timber plate subjected to uniaxial tensile loading. The objective is to investigate the **mechanical response and progressive damage behaviour** using a damage-based constitutive model (**MAT_054**) in LS-DYNA.
 
-Traditional design approaches often overlook nonlinear damage evolution, which may lead to inaccurate estimation of structural performance and safety. Therefore, there is a need to evaluate the effectiveness of damage-based numerical models in representing the complete mechanical response of timber under tensile loading.
+The study emphasizes:
+- Accurate simulation of **damage initiation and evolution**
+- Representation of **nonlinear material behaviour**
+- Analysis of **post-peak softening and residual strength**
 
-## Objectives
-- Develop a finite element model of a timber plate under uniaxial tensile loading using LS-DYNA
-- Implement the damage-based material model MAT_054 for progressive failure simulation
-- Analyse stress-time and displacement-time responses
-- Derive and interpret the stress-strain behaviour
-- Investigate damage initiation, stiffness degradation, and post-peak softening
-- Assess the capability of the numerical model to represent progressive failure behaviour
+---
 
-## Numerical Model
-A rectangular timber plate with a total length of 140 mm was modelled. The specimen includes 30 mm grip regions on both ends, resulting in an effective gauge length of 80 mm. The geometry was discretised using a structured mesh with an approximate element size of 2 mm to ensure numerical stability and adequate resolution of deformation and stress distribution.
+## ⚠️ Problem Statement
+Timber and composite materials exhibit **anisotropic and progressive failure behaviour**, which cannot be accurately captured using conventional linear or elastic models.
 
-Boundary conditions were applied such that one end of the plate was constrained, while the opposite end was subjected to displacement-controlled loading along the longitudinal direction.
+Traditional design approaches often:
+- Ignore **damage evolution**
+- Fail to capture **post-peak behaviour**
+- Underestimate **structural performance and safety**
 
-## Material Modelling
-The material behaviour was defined using MAT_054 in LS-DYNA, a composite damage model capable of representing:
-- Elastic response
-- Progressive damage initiation
-- Stiffness degradation
-- Residual load-carrying capacity
+👉 Therefore, advanced numerical modelling is required to simulate the **complete mechanical response**, including stiffness degradation and progressive failure.
 
-This model is suitable for simulating composite-like and anisotropic materials where failure develops progressively rather than instantaneously.
+---
 
-## Key Findings
-- The model captured an initial elastic response followed by nonlinear damage evolution
-- Peak stress was approximately 27 MPa
-- Post-peak softening behaviour was observed, confirming progressive failure
-- The displacement response remained smooth and stable throughout the simulation
-- Residual strength was retained after peak load, indicating gradual loss of stiffness rather than abrupt brittle failure
+## 🎯 Objectives
+- Develop a finite element model of a timber plate under tensile loading  
+- Implement **MAT_054 damage model** in LS-DYNA  
+- Analyse **stress–time and displacement–time responses**  
+- Derive and interpret **stress–strain behaviour**  
+- Investigate **damage initiation and propagation**  
+- Evaluate **post-peak softening and residual strength**  
 
-## Engineering Significance
-This project demonstrates the practical use of finite element modelling for analysing the structural behaviour of timber-like materials. The modelling approach can support:
-- Structural safety assessment
-- FEM-based design validation
-- Damage modelling of anisotropic materials
-- Research on timber-composite structural systems
+---
 
-## Software Used
-- LS-DYNA
-- LS-PrePost
-- Microsoft Excel
-- Microsoft Word
+## 🧩 Numerical Modelling Approach
 
-## Skills Demonstrated
-- Finite Element Modelling (FEM)
-- LS-DYNA simulation and post-processing
-- Mesh discretisation strategy
-- Constitutive damage modelling
-- Structural behaviour and failure analysis
-- Engineering interpretation of numerical results
+### Geometry
+- Total length: **140 mm**
+- Gauge length: **80 mm**
+- Grip regions: **30 mm (each side)**
 
-## Project Report
-The full technical report is available here:
+### Mesh Strategy
+- Structured mesh with **2 mm element size**
+- ~70 elements along loading direction
+- Ensures:
+  - Accurate stress distribution
+  - Numerical stability
+  - Proper damage capture
 
-[Download the full PDF report](./FEM_Project_Timber_Damage_Analysis_LS-DYNA.pdf)
+### Boundary Conditions
+- One end: Fully constrained  
+- Other end: **Displacement-controlled loading**
 
-## Figures
-### Structured Mesh
-![Structured Mesh](images/mesh-model.png)
+---
 
-### Stress Distribution
+## 🧪 Material Modelling (MAT_054)
+
+The material behaviour is defined using a **damage-based composite model**, capable of capturing:
+
+- Elastic response  
+- Damage initiation  
+- Stiffness degradation  
+- Residual load-carrying capacity  
+
+👉 This enables realistic simulation of **progressive failure mechanisms** in anisotropic materials.
+
+---
+
+## 📊 Key Results & Findings
+
+- ✔ Initial **linear elastic behaviour** followed by nonlinear response  
+- ✔ Peak stress ≈ **27 MPa**  
+- ✔ Clear **damage initiation and evolution**  
+- ✔ Significant **post-peak softening behaviour**  
+- ✔ Smooth and stable displacement response  
+- ✔ Presence of **residual strength after failure**
+
+👉 The results confirm that the model successfully captures **progressive damage instead of brittle failure**.
+
+---
+
+## 🖼️ Simulation Results
+
+### 🔹 Structured Mesh
+![Mesh](images/mesh-model.png)
+
+### 🔹 Stress Distribution (von Mises)
 ![Stress Distribution](images/stress-distribution.png)
 
-### Stress-Time Response
-![Stress-Time Response](images/stress-time-curve.png)
+### 🔹 Stress–Time Response
+![Stress-Time](images/stress-time-curve.png)
 
-### Displacement-Time Response
-![Displacement-Time Response](images/displacement-time-curve.png)
+### 🔹 Displacement–Time Response
+![Displacement-Time](images/displacement-time-curve.png)
 
-### Stress-Strain Behaviour
-![Stress-Strain Behaviour](images/stress-strain-curve.png)
+### 🔹 Stress–Strain Behaviour
+![Stress-Strain](images/stress-strain-curve.png)
 
-## Author
+---
+
+## 🏗️ Engineering Significance
+This study demonstrates how FEM can be used for:
+
+- Structural safety assessment  
+- Damage modelling of anisotropic materials  
+- FEM-based design validation  
+- Timber and composite structural analysis  
+
+👉 Particularly valuable for:
+- Sustainable construction materials  
+- Advanced structural simulations  
+- Research-oriented engineering applications  
+
+---
+
+## 🛠️ Tools & Technologies
+- LS-DYNA  
+- LS-PrePost  
+- Microsoft Excel  
+- Microsoft Word  
+
+---
+
+## 💡 Skills Demonstrated
+- Finite Element Modelling (FEM)  
+- Constitutive damage modelling  
+- Mesh discretisation strategy  
+- Structural behaviour analysis  
+- Simulation result interpretation  
+- Engineering problem-solving  
+
+---
+
+## 📄 Full Project Report
+📥 [Download Complete Report (PDF)](./FEM_Project_Timber_Damage_Analysis_LS-DYNA.pdf)
+
+---
+
+## 👨‍💻 Author
 **Imran Sarker Siam**  
-Department of Building Engineering & Construction Management  
-Rajshahi University of Engineering & Technology, Bangladesh
+B.Sc. in Building Engineering & Construction Management  
+Rajshahi University of Engineering & Technology (RUET), Bangladesh  
 
-## Notes
-This repository is intended for academic and professional portfolio purposes.
+---
+
+## 📌 Notes
+This repository is created for **academic and professional portfolio purposes**, showcasing advanced simulation and modelling skills in structural engineering.
+
+---
+
+⭐ If you find this project useful, feel free to star the repository!
